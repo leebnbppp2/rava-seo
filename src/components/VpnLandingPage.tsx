@@ -2,10 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import {
   buildAbsoluteUrl,
-  getRelatedPages,
   LandingPageData,
   lastUpdated,
-  pageLinks,
   primaryReferralPath,
   quickSignals,
   sharedFaqs,
@@ -41,8 +39,6 @@ type VpnLandingPageProps = {
 };
 
 export default function VpnLandingPage({ page }: VpnLandingPageProps) {
-  const relatedPages = getRelatedPages(page.relatedPaths);
-  const navLinks = pageLinks.filter((item) => item.href !== page.path).slice(0, 3);
   const heroSignals = quickSignals.slice(0, 1);
   const openingParagraphs = page.openingAnswer.slice(0, 1);
   const evaluationCards = page.evaluationPoints.slice(0, 2);
@@ -97,18 +93,9 @@ export default function VpnLandingPage({ page }: VpnLandingPageProps) {
       <section className="hero-shell px-4 pb-16 pt-6 md:pb-24 md:pt-8">
         <div className="mx-auto max-w-6xl">
           <header className="mb-10 rounded-[2rem] border border-black/10 bg-white/45 px-5 py-4 backdrop-blur-sm md:px-6">
-            <div className="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
-              <div>
-                <p className="text-lg font-black tracking-tight">{siteName}</p>
-                <p className="mt-1 text-sm text-[var(--muted)]">先免费用个三天，再决定要不要充个会员。</p>
-              </div>
-              <nav className="flex flex-wrap gap-2 text-sm font-medium text-[var(--foreground)]/70">
-                {navLinks.map((item) => (
-                  <Link key={item.href} href={item.href} className="rounded-full border border-black/6 bg-white/55 px-3 py-1.5 transition hover:bg-white/80 hover:text-[var(--foreground)]">
-                    {item.shortTitle}
-                  </Link>
-                ))}
-              </nav>
+            <div>
+              <p className="text-lg font-black tracking-tight">{siteName}</p>
+              <p className="mt-1 text-sm text-[var(--muted)]">先免费用个三天，再决定要不要充个会员。</p>
             </div>
           </header>
 
@@ -185,28 +172,6 @@ export default function VpnLandingPage({ page }: VpnLandingPageProps) {
         </div>
       </section>
 
-      <section className="px-4 pb-12 md:pb-18">
-        <div className="mx-auto max-w-6xl rounded-[2rem] bg-[var(--accent-dark)] px-6 py-10 text-white md:px-10 md:py-12">
-          <div className="grid gap-6 lg:grid-cols-[1.08fr_0.92fr] lg:items-start">
-            <div>
-              <p className="section-label mb-4 text-[#ffe557]">接着看</p>
-              <h2 className="text-3xl font-black md:text-4xl">先看重点，不够再点下一页</h2>
-              <p className="mt-4 max-w-2xl text-base leading-8 text-white/78">
-                最怕不稳就看稳定性，想先试清楚就看试用，在意隐私就看无日志。
-              </p>
-            </div>
-            <div className="grid gap-4">
-              {relatedPages.slice(0, 3).map((item) => (
-                <Link key={item.href} href={item.href} className="rounded-[1.5rem] border border-white/10 bg-white/8 p-5 transition hover:bg-white/12">
-                  <p className="text-sm font-semibold uppercase tracking-[0.18em] text-white/62">{item.shortTitle}</p>
-                  <p className="mt-2 text-xl font-black">{item.title}</p>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section id="faq" className="px-4 pb-16 md:pb-24">
         <div className="mx-auto max-w-6xl">
           <div className="mb-6 max-w-3xl">
@@ -229,15 +194,11 @@ export default function VpnLandingPage({ page }: VpnLandingPageProps) {
                 <p className="section-label mb-3 text-[var(--accent)]">最后一句</p>
                 <h2 className="text-3xl font-black md:text-4xl">{page.finalTitle}</h2>
                 <p className="mt-4 text-base leading-8 text-[var(--muted)]">{page.finalBody}</p>
-                <p className="mt-4 text-sm text-[var(--muted-foreground)]">页面更新时间：{lastUpdated}</p>
               </div>
-              <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
+              <div>
                 <a href={primaryReferralPath} className="btn-primary text-base md:text-lg">
                   先免费用个三天
                 </a>
-                <Link href="/vpn-guide" className="btn-secondary text-base md:text-lg">
-                  先看看别的页
-                </Link>
               </div>
             </div>
           </div>

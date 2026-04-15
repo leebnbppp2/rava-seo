@@ -131,7 +131,6 @@ export default function VpnGuidePage() {
               先看中国使用页
             </Link>
           </div>
-          <p className="mt-5 text-sm text-[var(--muted-foreground)]">页面更新时间：{lastUpdated}</p>
         </section>
       </div>
     </main>
