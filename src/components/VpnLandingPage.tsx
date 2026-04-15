@@ -96,7 +96,7 @@ export default function VpnLandingPage({ page }: VpnLandingPageProps) {
             <div className="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
               <div>
                 <p className="text-lg font-black tracking-tight">{siteName}</p>
-                <p className="mt-1 text-sm text-[var(--muted)]">中文用户优先的 VPN 选购微站，兼顾百度和 Google 的 SEO 结构。</p>
+                <p className="mt-1 text-sm text-[var(--muted)]">帮你快速判断哪类 VPN 更适合自己，先看重点，再决定要不要试用。</p>
               </div>
               <nav className="flex flex-wrap gap-2 text-sm font-semibold text-[var(--foreground)]/82">
                 {pageLinks.map((item) => (
@@ -132,10 +132,10 @@ export default function VpnLandingPage({ page }: VpnLandingPageProps) {
             </div>
 
             <div className="surface-card rounded-[2rem] p-6 md:p-8">
-              <p className="section-label mb-4 text-[var(--accent)]">搜索意图速读</p>
+              <p className="section-label mb-4 text-[var(--accent)]">快速看重点</p>
               <div className="space-y-4">
                 <div className="rounded-3xl border border-black/8 bg-white/70 p-5">
-                  <p className="text-lg font-extrabold">这页适合谁</p>
+                  <p className="text-lg font-extrabold">这页更适合哪类人</p>
                   <p className="mt-2 text-sm leading-7 text-[var(--muted)]">{page.searchIntent}</p>
                 </div>
                 {quickSignals.map((card) => (
@@ -161,14 +161,14 @@ export default function VpnLandingPage({ page }: VpnLandingPageProps) {
               ))}
             </div>
             <div className="mt-8 rounded-[1.5rem] border border-white/10 bg-white/8 p-5">
-              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-white/62">关键词方向</p>
+              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-white/62">一句话重点</p>
               <p className="mt-3 text-base leading-8 text-white/82">{page.keywordText}</p>
             </div>
           </div>
 
           <div className="surface-card rounded-[2rem] p-8 md:p-10">
             <p className="section-label mb-4 text-[var(--accent)]">怎么判断更实际</p>
-            <h2 className="text-3xl font-black md:text-4xl">针对百度和 Google 都更友好的内容结构</h2>
+            <h2 className="text-3xl font-black md:text-4xl">先把最值得确认的几件事看清楚</h2>
             <div className="mt-6 grid gap-4 sm:grid-cols-2">
               {page.evaluationPoints.map((item) => (
                 <div key={item.title} className="rounded-3xl border border-black/8 bg-white/70 p-5">
@@ -206,7 +206,7 @@ export default function VpnLandingPage({ page }: VpnLandingPageProps) {
               ))}
             </div>
             <div className="mt-6 rounded-[1.5rem] bg-[var(--accent-dark)] p-5 text-white">
-              <p className="text-lg font-bold">为什么这样写更利于 SEO</p>
+              <p className="text-lg font-bold">为什么建议你这样看</p>
               <p className="mt-2 text-sm leading-7 text-white/78">{page.recommendationReason}</p>
             </div>
           </div>
@@ -218,9 +218,9 @@ export default function VpnLandingPage({ page }: VpnLandingPageProps) {
           <div className="grid gap-8 lg:grid-cols-[1.08fr_0.92fr] lg:items-start">
             <div>
               <p className="section-label mb-4 text-[#ffe557]">继续深入看</p>
-              <h2 className="text-3xl font-black md:text-4xl">别只停在一个关键词页，顺着主题继续判断会更快</h2>
+              <h2 className="text-3xl font-black md:text-4xl">别只停在一页，顺着你的需求继续看会更快</h2>
               <p className="mt-4 max-w-2xl text-base leading-8 text-white/78">
-                百度更喜欢直给的栏目结构，Google 更容易理解主题集群。把站内相关页面连起来，用户和搜索引擎都更容易知道下一步该看什么。
+                如果你已经大致知道自己更在意稳定性、试用门槛还是隐私，就继续看对应页面。这样比来回跳着看零散信息更省时间，也更容易做决定。
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 {supportedDevices.map((item) => (
@@ -249,7 +249,7 @@ export default function VpnLandingPage({ page }: VpnLandingPageProps) {
             <p className="section-label mb-4 text-[var(--accent-dark)]">常见问题</p>
             <h2 className="text-3xl font-black md:text-4xl">先把最常见的顾虑看清楚</h2>
             <p className="mt-4 text-base leading-8 text-[var(--muted)]">
-              对中文 SEO 页面来说，FAQ 不只是补充内容，也是让百度和 Google 更清楚理解主题边界的方式。这里保留的是最常被问到的问题。
+              这些都是中文用户在挑 VPN 时最常问的问题。先把这些基础问题看清楚，再决定要不要试用，会更稳妥。
             </p>
           </div>
 
@@ -268,7 +268,7 @@ export default function VpnLandingPage({ page }: VpnLandingPageProps) {
                 <p className="section-label mb-3 text-[var(--accent)]">最后结论</p>
                 <h2 className="text-3xl font-black md:text-4xl">{page.finalTitle}</h2>
                 <p className="mt-4 text-base leading-8 text-[var(--muted)]">{page.finalBody}</p>
-                <p className="mt-4 text-sm text-[var(--muted-foreground)]">页面更新时间：{lastUpdated} · 这页会继续按中文搜索词和真实使用场景优化。</p>
+                <p className="mt-4 text-sm text-[var(--muted-foreground)]">页面更新时间：{lastUpdated}</p>
               </div>
               <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
                 <a href={primaryReferralPath} className="btn-primary text-base md:text-lg">

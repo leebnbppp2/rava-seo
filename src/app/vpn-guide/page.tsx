@@ -50,10 +50,10 @@ export default function VpnGuidePage() {
       <div className="mx-auto max-w-6xl">
         <header className="hero-shell rounded-[2rem] px-6 py-8 md:px-10 md:py-12">
           <div className="max-w-4xl">
-            <p className="section-label mb-4 text-[var(--accent-dark)]">中文 VPN 选购专题 · SEO 聚合页</p>
-            <h1 className="text-4xl font-black leading-tight tracking-tight md:text-6xl">先按需求选入口，比盲目搜关键词更快</h1>
+            <p className="section-label mb-4 text-[var(--accent-dark)]">中文 VPN 选购专题 · 按需求快速找入口</p>
+            <h1 className="text-4xl font-black leading-tight tracking-tight md:text-6xl">先按需求选入口，比来回看资料更快</h1>
             <p className="mt-5 max-w-3xl text-lg leading-8 text-[var(--muted)] md:text-xl">
-              这一页把中文用户最常见的 VPN 搜索主题整理成一个专题页：适合中国使用、免费试用、无日志、设备兼容和多设备场景。这样做不只是方便你看，也更利于百度和 Google 理解整个站点的主题结构。
+              这一页把中文用户最常见的几个判断方向整理在一起：适合中国使用、免费试用、无日志、设备兼容和多设备场景。你可以先看自己最在意哪一项，再进入对应页面，会比盲目到处找资料更省时间。
             </p>
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
               <a href={primaryReferralPath} className="btn-primary text-base md:text-lg">
@@ -101,7 +101,6 @@ export default function VpnGuidePage() {
                   </span>
                 </div>
                 <p className="mt-4 text-base leading-8 text-[var(--muted)]">{item.summary}</p>
-                <p className="mt-3 text-sm leading-7 text-[var(--muted-foreground)]">关键词方向：{item.keywords.join(" / ")}</p>
               </Link>
             ))}
           </div>
