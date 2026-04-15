@@ -63,7 +63,7 @@ export const sharedFaqs = [
 export const pageLinks: PageLink[] = [
   {
     href: "/",
-    shortTitle: "首页",
+    shortTitle: "稳定 VPN",
     title: "中国可用的稳定 VPN 推荐",
     summary: "适合先看个大概：到底稳不稳、值不值得先免费用个三天。",
     keywords: ["中国可用 vpn", "稳定 vpn 推荐", "中国网络环境 vpn"],
