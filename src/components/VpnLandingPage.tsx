@@ -43,6 +43,8 @@ type VpnLandingPageProps = {
 
 export default function VpnLandingPage({ page }: VpnLandingPageProps) {
   const relatedPages = getRelatedPages(page.relatedPaths);
+  const heroSignals = quickSignals.slice(0, 3);
+  const openingParagraphs = page.openingAnswer.slice(0, 1);
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -138,7 +140,7 @@ export default function VpnLandingPage({ page }: VpnLandingPageProps) {
                   <p className="text-lg font-extrabold">你要是这种情况，就先看这里</p>
                   <p className="mt-2 text-sm leading-7 text-[var(--muted)]">{page.searchIntent}</p>
                 </div>
-                {quickSignals.map((card) => (
+                {heroSignals.map((card) => (
                   <div key={card.title} className="rounded-3xl border border-black/8 bg-white/70 p-5">
                     <p className="text-lg font-extrabold">{card.title}</p>
                     <p className="mt-2 text-sm leading-7 text-[var(--muted)]">{card.body}</p>
@@ -156,7 +158,7 @@ export default function VpnLandingPage({ page }: VpnLandingPageProps) {
             <p className="section-label mb-4 text-[#ffe557]">先说点实在的</p>
             <h2 className="text-3xl font-black md:text-4xl">别先看参数，先看用起来会不会闹心</h2>
             <div className="mt-4 space-y-4 text-base leading-8 text-white/78">
-              {page.openingAnswer.map((paragraph) => (
+              {openingParagraphs.map((paragraph) => (
                 <p key={paragraph}>{paragraph}</p>
               ))}
             </div>
@@ -182,12 +184,11 @@ export default function VpnLandingPage({ page }: VpnLandingPageProps) {
       </section>
 
       <section className="px-4 pb-12 md:pb-18">
-        <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[1.02fr_0.98fr]">
+        <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-2">
           <div className="surface-card rounded-[2rem] p-8 md:p-10">
-            <p className="section-label mb-4 text-[var(--accent)]">更适合谁</p>
-            <h2 className="text-3xl font-black md:text-4xl">如果你正好是这几种情况，往下看就对了</h2>
-            <div className="mt-6 grid gap-3">
-              {page.usefulFor.map((item) => (
+            <p className="section-label mb-4 text-[var(--accent)]">适合你</p>
+            <div className="mt-2 grid gap-3">
+              {page.usefulFor.slice(0, 3).map((item) => (
                 <div key={item} className="rounded-3xl border border-black/8 bg-white/70 px-5 py-4 text-sm leading-7 text-[var(--muted)] md:text-base">
                   {item}
                 </div>
@@ -196,18 +197,13 @@ export default function VpnLandingPage({ page }: VpnLandingPageProps) {
           </div>
 
           <div className="surface-card rounded-[2rem] p-8 md:p-10">
-            <p className="section-label mb-4 text-[var(--accent-dark)]">不一定适合</p>
-            <h2 className="text-3xl font-black md:text-4xl">如果你想找的是这些，那这页可能不是给你的</h2>
-            <div className="mt-6 grid gap-3">
-              {page.avoidIf.map((item) => (
+            <p className="section-label mb-4 text-[var(--accent-dark)]">不适合你</p>
+            <div className="mt-2 grid gap-3">
+              {page.avoidIf.slice(0, 3).map((item) => (
                 <div key={item} className="rounded-3xl border border-black/8 bg-white/70 px-5 py-4 text-sm leading-7 text-[var(--muted)] md:text-base">
                   {item}
                 </div>
               ))}
-            </div>
-            <div className="mt-6 rounded-[1.5rem] bg-[var(--accent-dark)] p-5 text-white">
-              <p className="text-lg font-bold">为什么我建议你先这样看</p>
-              <p className="mt-2 text-sm leading-7 text-white/78">{page.recommendationReason}</p>
             </div>
           </div>
         </div>
@@ -218,9 +214,9 @@ export default function VpnLandingPage({ page }: VpnLandingPageProps) {
           <div className="grid gap-8 lg:grid-cols-[1.08fr_0.92fr] lg:items-start">
             <div>
               <p className="section-label mb-4 text-[#ffe557]">接着看</p>
-              <h2 className="text-3xl font-black md:text-4xl">你最在意什么，就点进去看那个</h2>
+              <h2 className="text-3xl font-black md:text-4xl">按你最在意的点去点就行</h2>
               <p className="mt-4 max-w-2xl text-base leading-8 text-white/78">
-                不用把所有页面都刷一遍。你要是最怕在中国用着不稳，就去看稳定性；你要是想先试清楚再决定，就看试用；你要是本来就更在意隐私，就直接看无日志。
+                最怕不稳就看稳定性，想先试清楚就看试用，在意隐私就看无日志。
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 {supportedDevices.map((item) => (
@@ -245,12 +241,9 @@ export default function VpnLandingPage({ page }: VpnLandingPageProps) {
 
       <section id="faq" className="px-4 pb-16 md:pb-24">
         <div className="mx-auto max-w-6xl">
-          <div className="mb-8 max-w-3xl">
+          <div className="mb-6 max-w-3xl">
             <p className="section-label mb-4 text-[var(--accent-dark)]">常见问题</p>
-            <h2 className="text-3xl font-black md:text-4xl">大家最常纠结的，基本就是这几件事</h2>
-            <p className="mt-4 text-base leading-8 text-[var(--muted)]">
-              先把这里看完，心里基本就能有个底。没必要一下子全想明白，先把最担心的那一项看清楚就够了。
-            </p>
+            <h2 className="text-3xl font-black md:text-4xl">常见问题</h2>
           </div>
 
           <div className="grid gap-4">
