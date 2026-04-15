@@ -99,7 +99,7 @@ export default function VpnLandingPage({ page }: VpnLandingPageProps) {
             <div className="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
               <div>
                 <p className="text-lg font-black tracking-tight">{siteName}</p>
-                <p className="mt-1 text-sm text-[var(--muted)]">先看稳不稳，再决定要不要先免费用个三天。</p>
+                <p className="mt-1 text-sm text-[var(--muted)]">先免费用个三天，再决定要不要充个会员。</p>
               </div>
               <nav className="flex flex-wrap gap-2 text-sm font-semibold text-[var(--foreground)]/82">
                 {pageLinks.map((item) => (
