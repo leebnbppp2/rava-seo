@@ -42,6 +42,7 @@ type VpnLandingPageProps = {
 
 export default function VpnLandingPage({ page }: VpnLandingPageProps) {
   const relatedPages = getRelatedPages(page.relatedPaths);
+  const navLinks = pageLinks.filter((item) => item.href !== page.path).slice(0, 4);
   const heroSignals = quickSignals.slice(0, 1);
   const openingParagraphs = page.openingAnswer.slice(0, 1);
   const evaluationCards = page.evaluationPoints.slice(0, 2);
@@ -102,8 +103,8 @@ export default function VpnLandingPage({ page }: VpnLandingPageProps) {
                 <p className="mt-1 text-sm text-[var(--muted)]">先免费用个三天，再决定要不要充个会员。</p>
               </div>
               <nav className="flex flex-wrap gap-2 text-sm font-semibold text-[var(--foreground)]/82">
-                {pageLinks.map((item) => (
-                  <Link key={item.href} href={item.href} className="rounded-full border border-black/8 bg-white/70 px-4 py-2 transition hover:bg-white">
+                {navLinks.map((item) => (
+                  <Link key={item.href} href={item.href} className="rounded-full border border-black/8 bg-white/70 px-3 py-2 transition hover:bg-white">
                     {item.shortTitle}
                   </Link>
                 ))}
