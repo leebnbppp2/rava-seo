@@ -10,7 +10,6 @@ import {
   quickSignals,
   sharedFaqs,
   siteName,
-  supportedDevices,
 } from "@/lib/site";
 
 export function buildMetadata(page: Pick<LandingPageData, "path" | "metaTitle" | "metaDescription" | "title">): Metadata {
@@ -43,12 +42,10 @@ type VpnLandingPageProps = {
 
 export default function VpnLandingPage({ page }: VpnLandingPageProps) {
   const relatedPages = getRelatedPages(page.relatedPaths);
-  const heroSignals = quickSignals.slice(0, 2);
+  const heroSignals = quickSignals.slice(0, 1);
   const openingParagraphs = page.openingAnswer.slice(0, 1);
-  const evaluationCards = page.evaluationPoints.slice(0, 3);
-  const usefulItems = page.usefulFor.slice(0, 2);
-  const avoidItems = page.avoidIf.slice(0, 2);
-  const faqItems = sharedFaqs.slice(0, 3);
+  const evaluationCards = page.evaluationPoints.slice(0, 2);
+  const faqItems = sharedFaqs.slice(0, 2);
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -188,54 +185,20 @@ export default function VpnLandingPage({ page }: VpnLandingPageProps) {
       </section>
 
       <section className="px-4 pb-12 md:pb-18">
-        <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-2">
-          <div className="surface-card rounded-[2rem] p-8 md:p-10">
-            <p className="section-label mb-4 text-[var(--accent)]">适合你</p>
-            <div className="mt-2 grid gap-3">
-              {usefulItems.map((item) => (
-                <div key={item} className="rounded-3xl border border-black/8 bg-white/70 px-5 py-4 text-sm leading-7 text-[var(--muted)] md:text-base">
-                  {item}
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="surface-card rounded-[2rem] p-8 md:p-10">
-            <p className="section-label mb-4 text-[var(--accent-dark)]">不适合你</p>
-            <div className="mt-2 grid gap-3">
-              {avoidItems.map((item) => (
-                <div key={item} className="rounded-3xl border border-black/8 bg-white/70 px-5 py-4 text-sm leading-7 text-[var(--muted)] md:text-base">
-                  {item}
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="px-4 pb-12 md:pb-18">
         <div className="mx-auto max-w-6xl rounded-[2rem] bg-[var(--accent-dark)] px-6 py-10 text-white md:px-10 md:py-12">
-          <div className="grid gap-8 lg:grid-cols-[1.08fr_0.92fr] lg:items-start">
+          <div className="grid gap-6 lg:grid-cols-[1.08fr_0.92fr] lg:items-start">
             <div>
               <p className="section-label mb-4 text-[#ffe557]">接着看</p>
-              <h2 className="text-3xl font-black md:text-4xl">按你最在意的点去点就行</h2>
+              <h2 className="text-3xl font-black md:text-4xl">先看重点，不够再点下一页</h2>
               <p className="mt-4 max-w-2xl text-base leading-8 text-white/78">
                 最怕不稳就看稳定性，想先试清楚就看试用，在意隐私就看无日志。
               </p>
-              <div className="mt-6 flex flex-wrap gap-3">
-                {supportedDevices.map((item) => (
-                  <div key={item} className="app-chip">
-                    {item}
-                  </div>
-                ))}
-              </div>
             </div>
             <div className="grid gap-4">
-              {relatedPages.map((item) => (
+              {relatedPages.slice(0, 3).map((item) => (
                 <Link key={item.href} href={item.href} className="rounded-[1.5rem] border border-white/10 bg-white/8 p-5 transition hover:bg-white/12">
                   <p className="text-sm font-semibold uppercase tracking-[0.18em] text-white/62">{item.shortTitle}</p>
                   <p className="mt-2 text-xl font-black">{item.title}</p>
-                  <p className="mt-2 text-sm leading-7 text-white/74">{item.summary}</p>
                 </Link>
               ))}
             </div>
