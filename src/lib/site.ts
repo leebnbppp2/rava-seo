@@ -127,11 +127,11 @@ export const landingPages: Record<string, LandingPageData> = {
     metaTitle: "中国可用的稳定 VPN 推荐｜支持试用、兼顾隐私与多设备",
     metaDescription:
       "面向中文用户的 VPN 推荐页面，重点介绍中国网络环境下更稳的连接体验、3 天免费试用、4 台设备支持和无日志隐私保护。",
-    keywordText: "先看稳定性、试用门槛、多设备和隐私这四个点，通常就足够判断它适不适合你。",
-    searchIntent: "适合第一次来了解整体情况、想先看重点再决定要不要试用的人。",
+    keywordText: "先看稳定性、试用门槛、多设备和隐私这四件事，通常就够你判断它值不值得试。",
+    searchIntent: "适合第一次来了解整体情况，想先看重点、再决定要不要试用的人。",
     openingAnswer: [
       "如果你最担心的是在中国到底能不能稳定使用 VPN，那就先看稳定性、免费试用、多设备和隐私这四个点，通常已经够你做第一轮判断。",
-      "与其一开始就被各种参数和评测绕晕，不如先确认它是不是适合你的网络环境、常用设备和日常使用习惯。",
+      "与其一开始就被各种参数和评测绕晕，不如先确认它是不是适合你的网络环境、常用设备和日常使用习惯。适合的话再试，不适合就继续看别的，也更省时间。",
     ],
     evaluationPoints: [
       {
@@ -163,10 +163,10 @@ export const landingPages: Record<string, LandingPageData> = {
       "已经明确知道自己只关心某个单一主题，比如纯隐私或纯免费试用",
     ],
     recommendationReason:
-      "如果你先按稳定性、试用门槛和隐私来判断，通常会比一上来就看很多零散信息更快缩小范围。",
-    finalTitle: "先试一试，比来回比参数更容易得到答案",
+      "如果你先按稳定性、试用门槛和隐私来判断，通常会比一上来就看很多零散信息更快缩小范围，也更容易决定要不要亲自试一下。",
+    finalTitle: "先试一下，通常比反复做功课更快出答案",
     finalBody:
-      "如果你现在想找的是一个在中国网络环境下更稳、又能先试用的 VPN，那最省时间的做法不是继续翻很多相似文章，而是先用 3 天试试自己的真实体验。",
+      "如果你现在想找的是一个在中国网络环境下更稳、又能先试用的 VPN，那最省时间的做法通常不是继续翻很多相似文章，而是先用 3 天试试自己的真实体验。",
     relatedPaths: ["/vpn-guide", "/best-vpn-for-china", "/vpn-free-trial", "/no-log-vpn"],
   },
   china: {
@@ -178,10 +178,10 @@ export const landingPages: Record<string, LandingPageData> = {
     metaTitle: "中国好用 VPN 推荐｜适合中国网络环境，支持免费试用",
     metaDescription:
       "想找中国好用的 VPN？这页重点介绍中国网络环境下的稳定连接、3 天免费试用、4 台设备支持和无日志隐私保护。",
-    keywordText: "中国好用 vpn / 适合中国使用的 vpn / 中国可用 vpn 推荐",
+    keywordText: "先看中国网络环境下的稳定性，再看试用、多设备和隐私，通常就能判断它靠不靠谱。",
     searchIntent: "适合已经明确想找中国能用、连接更稳的方案，希望尽快判断值不值得试的人。",
     openingAnswer: [
-      "中国好用 VPN 真正重要的，不是功能写得多热闹，而是你在中国网络环境里打开常用网站和 App 时，能不能稳定连上、切换顺不顺手。",
+      "中国好用 VPN 真正重要的，不是页面上写了多少功能，而是你在中国网络环境里打开常用网站和 App 时，能不能稳定连上、切换顺不顺手。",
       "所以这页更想直接回答几个实际问题：为什么它更适合中国使用、试用时该看什么，以及什么样的人更适合先试。",
     ],
     evaluationPoints: [
@@ -215,9 +215,9 @@ export const landingPages: Record<string, LandingPageData> = {
     ],
     recommendationReason:
       "如果你的核心需求就是中国能用、连接更稳，那先看这页会更省时间，因为最影响体验的几个判断点都已经放在前面了。",
-    finalTitle: "想找中国好用 VPN，先把“能不能稳”试出来",
+    finalTitle: "想找中国好用 VPN，先把“稳不稳”试出来",
     finalBody:
-      "如果你已经确定自己最在意的是中国能用、连接更稳，那就别只停在看介绍。用自己的网络环境试 3 天，通常比看很多碎片信息更有参考价值。",
+      "如果你已经确定自己最在意的是中国能用、连接更稳，那就别只停在看介绍。用自己的网络环境试 3 天，通常比看很多碎片信息更有参考价值，也更容易做决定。",
     relatedPaths: ["/", "/vpn-guide", "/vpn-free-trial", "/no-log-vpn"],
   },
   trial: {
@@ -229,7 +229,7 @@ export const landingPages: Record<string, LandingPageData> = {
     metaTitle: "免费试用 VPN 推荐｜先试 3 天，再判断是否适合",
     metaDescription:
       "想找能先试用的 VPN？这页重点介绍 3 天免费试用、适合中文用户的稳定连接、多设备支持和无日志隐私保护。",
-    keywordText: "先试 3 天，重点看能不能稳定连上、设备切换顺不顺手，以及值不值得继续用。",
+    keywordText: "先试 3 天，重点看能不能稳定连上、设备切换顺不顺手，以及你愿不愿意继续用。",
     searchIntent: "适合不想马上付费，想先用自己的网络和设备确认体验的人。",
     openingAnswer: [
       "免费试用真正有价值的地方，不只是“免费”两个字，而是你终于不用只靠别人的体验替自己做决定。",
@@ -265,8 +265,8 @@ export const landingPages: Record<string, LandingPageData> = {
       "不打算亲自测试，只想快速看结果汇总的人",
     ],
     recommendationReason:
-      "如果你最怕试错成本太高，那先看试用期到底该怎么判断，通常会比直接去比一堆参数更实用。",
-    finalTitle: "先试 3 天，很多问题就不用靠猜了",
+      "如果你最怕试错成本太高，那先看试用期到底该怎么判断，通常会比直接去比一堆参数更实用，也更贴近真实体验。",
+    finalTitle: "先试 3 天，很多问题很快就不用靠猜了",
     finalBody:
       "如果你现在最在意的是试错成本，那就把重点放在试用期。能不能连、稳不稳、设备切换顺不顺手，这些通常几天内就能看出来。",
     relatedPaths: ["/", "/vpn-guide", "/best-vpn-for-china", "/no-log-vpn"],
@@ -280,7 +280,7 @@ export const landingPages: Record<string, LandingPageData> = {
     metaTitle: "无日志 VPN 推荐｜更重视隐私保护，也兼顾稳定试用",
     metaDescription:
       "想找不留日志的 VPN？这页重点介绍无日志隐私保护、中国网络环境下的稳定连接、3 天免费试用和 4 台设备支持。",
-    keywordText: "如果你更在意隐私，就先确认无日志、连接稳定性和试用体验这三件事。",
+    keywordText: "如果你更在意隐私，就先确认无日志、连接稳定性和试用体验这三件事，再决定值不值得长期用。",
     searchIntent: "适合对隐私更敏感，希望长期使用时更安心一点的人。",
     openingAnswer: [
       "无日志 VPN 让人在意的地方，不是把“安全”说得多夸张，而是长期使用时，对自己的访问记录和痕迹能少一点顾虑。",
@@ -316,8 +316,8 @@ export const landingPages: Record<string, LandingPageData> = {
       "主要想看复杂技术白皮书，而不是先做日常判断的人",
     ],
     recommendationReason:
-      "如果你会长期使用 VPN，那除了能不能连上，也值得提前确认隐私这件事。先把无日志看明白，心里会更有底。",
-    finalTitle: "如果你在意隐私，无日志值得优先确认",
+      "如果你会长期使用 VPN，那除了能不能连上，也值得提前确认隐私这件事。先把无日志看明白，心里会更有底，用起来也更放心。",
+    finalTitle: "如果你在意隐私，无日志确实值得优先确认",
     finalBody:
       "当稳定连接、免费试用和多设备支持都具备时，无日志就会成为区分“能不能用”和“适不适合长期使用”的关键一步。",
     relatedPaths: ["/", "/vpn-guide", "/best-vpn-for-china", "/vpn-free-trial"],
@@ -346,4 +346,5 @@ export function getRelatedPages(paths: string[]) {
 export function buildAbsoluteUrl(path: string) {
   return path === "/" ? siteUrl : `${siteUrl}${path}`;
 }
+
 
