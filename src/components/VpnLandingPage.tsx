@@ -96,7 +96,7 @@ export default function VpnLandingPage({ page }: VpnLandingPageProps) {
             <div className="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
               <div>
                 <p className="text-lg font-black tracking-tight">{siteName}</p>
-                <p className="mt-1 text-sm text-[var(--muted)]">帮你快速判断哪类 VPN 更适合自己，先看重点，再决定要不要试用。</p>
+                <p className="mt-1 text-sm text-[var(--muted)]">先把最要紧的看明白，再决定要不要先免费用个三天。</p>
               </div>
               <nav className="flex flex-wrap gap-2 text-sm font-semibold text-[var(--foreground)]/82">
                 {pageLinks.map((item) => (
@@ -116,10 +116,10 @@ export default function VpnLandingPage({ page }: VpnLandingPageProps) {
 
               <div className="mt-8 flex flex-col gap-4 sm:flex-row">
                 <a href={primaryReferralPath} className="btn-primary text-base md:text-lg">
-                  开始免费试用
+                  先免费用个三天
                 </a>
                 <Link href="#analysis" className="btn-secondary text-base md:text-lg">
-                  先看判断重点
+                  先看我该看什么
                 </Link>
               </div>
 
@@ -132,10 +132,10 @@ export default function VpnLandingPage({ page }: VpnLandingPageProps) {
             </div>
 
             <div className="surface-card rounded-[2rem] p-6 md:p-8">
-              <p className="section-label mb-4 text-[var(--accent)]">快速看重点</p>
+              <p className="section-label mb-4 text-[var(--accent)]">先看一眼</p>
               <div className="space-y-4">
                 <div className="rounded-3xl border border-black/8 bg-white/70 p-5">
-                  <p className="text-lg font-extrabold">这页更适合哪类人</p>
+                  <p className="text-lg font-extrabold">什么人最适合先看这页</p>
                   <p className="mt-2 text-sm leading-7 text-[var(--muted)]">{page.searchIntent}</p>
                 </div>
                 {quickSignals.map((card) => (
@@ -153,22 +153,22 @@ export default function VpnLandingPage({ page }: VpnLandingPageProps) {
       <section id="analysis" className="px-4 pb-12 md:pb-18">
         <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[0.92fr_1.08fr]">
           <div className="surface-dark rounded-[2rem] p-8 md:p-10">
-            <p className="section-label mb-4 text-[#ffe557]">先给答案</p>
-            <h2 className="text-3xl font-black md:text-4xl">别先被参数绕住，先确认这页要解决的问题</h2>
+            <p className="section-label mb-4 text-[#ffe557]">先说人话</p>
+            <h2 className="text-3xl font-black md:text-4xl">别先研究一堆参数，先看这几个最容易踩坑的地方</h2>
             <div className="mt-4 space-y-4 text-base leading-8 text-white/78">
               {page.openingAnswer.map((paragraph) => (
                 <p key={paragraph}>{paragraph}</p>
               ))}
             </div>
             <div className="mt-8 rounded-[1.5rem] border border-white/10 bg-white/8 p-5">
-              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-white/62">一句话重点</p>
+              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-white/62">一句最要紧的话</p>
               <p className="mt-3 text-base leading-8 text-white/82">{page.keywordText}</p>
             </div>
           </div>
 
           <div className="surface-card rounded-[2rem] p-8 md:p-10">
-            <p className="section-label mb-4 text-[var(--accent)]">怎么判断更实际</p>
-            <h2 className="text-3xl font-black md:text-4xl">先把最值得确认的几件事看清楚</h2>
+            <p className="section-label mb-4 text-[var(--accent)]">具体看什么</p>
+            <h2 className="text-3xl font-black md:text-4xl">别光看广告词，先看这些地方顺不顺</h2>
             <div className="mt-6 grid gap-4 sm:grid-cols-2">
               {page.evaluationPoints.map((item) => (
                 <div key={item.title} className="rounded-3xl border border-black/8 bg-white/70 p-5">
@@ -184,8 +184,8 @@ export default function VpnLandingPage({ page }: VpnLandingPageProps) {
       <section className="px-4 pb-12 md:pb-18">
         <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[1.02fr_0.98fr]">
           <div className="surface-card rounded-[2rem] p-8 md:p-10">
-            <p className="section-label mb-4 text-[var(--accent)]">适合什么人</p>
-            <h2 className="text-3xl font-black md:text-4xl">如果你主要想先缩小范围，这部分最值得看</h2>
+            <p className="section-label mb-4 text-[var(--accent)]">更适合谁</p>
+            <h2 className="text-3xl font-black md:text-4xl">如果你是下面这几种情况，这页会比较省时间</h2>
             <div className="mt-6 grid gap-3">
               {page.usefulFor.map((item) => (
                 <div key={item} className="rounded-3xl border border-black/8 bg-white/70 px-5 py-4 text-sm leading-7 text-[var(--muted)] md:text-base">
@@ -196,8 +196,8 @@ export default function VpnLandingPage({ page }: VpnLandingPageProps) {
           </div>
 
           <div className="surface-card rounded-[2rem] p-8 md:p-10">
-            <p className="section-label mb-4 text-[var(--accent-dark)]">不一定适合你</p>
-            <h2 className="text-3xl font-black md:text-4xl">如果你更偏这些需求，可以先换思路</h2>
+            <p className="section-label mb-4 text-[var(--accent-dark)]">不一定适合</p>
+            <h2 className="text-3xl font-black md:text-4xl">如果你想要的是这些，那可以先换个看法</h2>
             <div className="mt-6 grid gap-3">
               {page.avoidIf.map((item) => (
                 <div key={item} className="rounded-3xl border border-black/8 bg-white/70 px-5 py-4 text-sm leading-7 text-[var(--muted)] md:text-base">
@@ -206,7 +206,7 @@ export default function VpnLandingPage({ page }: VpnLandingPageProps) {
               ))}
             </div>
             <div className="mt-6 rounded-[1.5rem] bg-[var(--accent-dark)] p-5 text-white">
-              <p className="text-lg font-bold">为什么建议你这样看</p>
+              <p className="text-lg font-bold">为什么我建议你先这样看</p>
               <p className="mt-2 text-sm leading-7 text-white/78">{page.recommendationReason}</p>
             </div>
           </div>
@@ -217,10 +217,10 @@ export default function VpnLandingPage({ page }: VpnLandingPageProps) {
         <div className="mx-auto max-w-6xl rounded-[2rem] bg-[var(--accent-dark)] px-6 py-10 text-white md:px-10 md:py-12">
           <div className="grid gap-8 lg:grid-cols-[1.08fr_0.92fr] lg:items-start">
             <div>
-              <p className="section-label mb-4 text-[#ffe557]">继续深入看</p>
-              <h2 className="text-3xl font-black md:text-4xl">别只停在一页，顺着你的需求继续看会更快</h2>
+              <p className="section-label mb-4 text-[#ffe557]">接着往下看</p>
+              <h2 className="text-3xl font-black md:text-4xl">你更在意哪件事，就顺着那条线继续看</h2>
               <p className="mt-4 max-w-2xl text-base leading-8 text-white/78">
-                如果你已经大致知道自己更在意稳定性、试用门槛还是隐私，就继续看对应页面。这样比来回跳着看零散信息更省时间，也更容易做决定。
+                你不用把所有页面都看完。要是你最在意中国能不能稳用，就去看稳定性；要是你最怕花冤枉钱，就先看试用；要是你本来就更在意隐私，那就直接看无日志。
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 {supportedDevices.map((item) => (
@@ -247,9 +247,9 @@ export default function VpnLandingPage({ page }: VpnLandingPageProps) {
         <div className="mx-auto max-w-6xl">
           <div className="mb-8 max-w-3xl">
             <p className="section-label mb-4 text-[var(--accent-dark)]">常见问题</p>
-            <h2 className="text-3xl font-black md:text-4xl">先把最常见的顾虑看清楚</h2>
+            <h2 className="text-3xl font-black md:text-4xl">大家最常卡住的，基本就是这几件事</h2>
             <p className="mt-4 text-base leading-8 text-[var(--muted)]">
-              这些都是中文用户在挑 VPN 时最常问的问题。先把这些基础问题看清楚，再决定要不要试用，会更稳妥。
+              先把这些问题看完，心里通常就会有数很多。别急着一次做决定，先把最担心的地方看明白就行。
             </p>
           </div>
 
@@ -265,17 +265,17 @@ export default function VpnLandingPage({ page }: VpnLandingPageProps) {
           <div className="surface-card mt-10 rounded-[2rem] p-8 md:p-10">
             <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
               <div className="max-w-3xl">
-                <p className="section-label mb-3 text-[var(--accent)]">最后结论</p>
+                <p className="section-label mb-3 text-[var(--accent)]">最后一句</p>
                 <h2 className="text-3xl font-black md:text-4xl">{page.finalTitle}</h2>
                 <p className="mt-4 text-base leading-8 text-[var(--muted)]">{page.finalBody}</p>
                 <p className="mt-4 text-sm text-[var(--muted-foreground)]">页面更新时间：{lastUpdated}</p>
               </div>
               <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
                 <a href={primaryReferralPath} className="btn-primary text-base md:text-lg">
-                  开始免费试用
+                  先免费用个三天
                 </a>
                 <Link href="/vpn-guide" className="btn-secondary text-base md:text-lg">
-                  看专题聚合页
+                  先看看别的页
                 </Link>
               </div>
             </div>
