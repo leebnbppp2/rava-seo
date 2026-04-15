@@ -43,8 +43,12 @@ type VpnLandingPageProps = {
 
 export default function VpnLandingPage({ page }: VpnLandingPageProps) {
   const relatedPages = getRelatedPages(page.relatedPaths);
-  const heroSignals = quickSignals.slice(0, 3);
+  const heroSignals = quickSignals.slice(0, 2);
   const openingParagraphs = page.openingAnswer.slice(0, 1);
+  const evaluationCards = page.evaluationPoints.slice(0, 3);
+  const usefulItems = page.usefulFor.slice(0, 2);
+  const avoidItems = page.avoidIf.slice(0, 2);
+  const faqItems = sharedFaqs.slice(0, 3);
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -135,7 +139,7 @@ export default function VpnLandingPage({ page }: VpnLandingPageProps) {
 
             <div className="surface-card rounded-[2rem] p-6 md:p-8">
               <p className="section-label mb-4 text-[var(--accent)]">先看一眼</p>
-              <div className="space-y-4">
+              <div className="space-y-3">
                 <div className="rounded-3xl border border-black/8 bg-white/70 p-5">
                   <p className="text-lg font-extrabold">你要是这种情况，就先看这里</p>
                   <p className="mt-2 text-sm leading-7 text-[var(--muted)]">{page.searchIntent}</p>
@@ -171,8 +175,8 @@ export default function VpnLandingPage({ page }: VpnLandingPageProps) {
           <div className="surface-card rounded-[2rem] p-8 md:p-10">
             <p className="section-label mb-4 text-[var(--accent)]">具体看什么</p>
             <h2 className="text-3xl font-black md:text-4xl">别听它怎么说，先看你自己用着顺不顺</h2>
-            <div className="mt-6 grid gap-4 sm:grid-cols-2">
-              {page.evaluationPoints.map((item) => (
+            <div className="mt-5 grid gap-3 sm:grid-cols-2">
+              {evaluationCards.map((item) => (
                 <div key={item.title} className="rounded-3xl border border-black/8 bg-white/70 p-5">
                   <p className="text-lg font-bold">{item.title}</p>
                   <p className="mt-2 text-sm leading-7 text-[var(--muted)]">{item.body}</p>
@@ -188,7 +192,7 @@ export default function VpnLandingPage({ page }: VpnLandingPageProps) {
           <div className="surface-card rounded-[2rem] p-8 md:p-10">
             <p className="section-label mb-4 text-[var(--accent)]">适合你</p>
             <div className="mt-2 grid gap-3">
-              {page.usefulFor.slice(0, 3).map((item) => (
+              {usefulItems.map((item) => (
                 <div key={item} className="rounded-3xl border border-black/8 bg-white/70 px-5 py-4 text-sm leading-7 text-[var(--muted)] md:text-base">
                   {item}
                 </div>
@@ -199,7 +203,7 @@ export default function VpnLandingPage({ page }: VpnLandingPageProps) {
           <div className="surface-card rounded-[2rem] p-8 md:p-10">
             <p className="section-label mb-4 text-[var(--accent-dark)]">不适合你</p>
             <div className="mt-2 grid gap-3">
-              {page.avoidIf.slice(0, 3).map((item) => (
+              {avoidItems.map((item) => (
                 <div key={item} className="rounded-3xl border border-black/8 bg-white/70 px-5 py-4 text-sm leading-7 text-[var(--muted)] md:text-base">
                   {item}
                 </div>
@@ -218,7 +222,7 @@ export default function VpnLandingPage({ page }: VpnLandingPageProps) {
               <p className="mt-4 max-w-2xl text-base leading-8 text-white/78">
                 最怕不稳就看稳定性，想先试清楚就看试用，在意隐私就看无日志。
               </p>
-              <div className="mt-8 flex flex-wrap gap-3">
+              <div className="mt-6 flex flex-wrap gap-3">
                 {supportedDevices.map((item) => (
                   <div key={item} className="app-chip">
                     {item}
@@ -247,7 +251,7 @@ export default function VpnLandingPage({ page }: VpnLandingPageProps) {
           </div>
 
           <div className="grid gap-4">
-            {sharedFaqs.map((item) => (
+            {faqItems.map((item) => (
               <details key={item.q} className="faq-item surface-card rounded-[1.5rem] p-5 md:p-6">
                 <summary className="cursor-pointer text-lg font-bold">{item.q}</summary>
                 <p className="mt-3 max-w-4xl text-sm leading-8 text-[var(--muted)] md:text-base">{item.a}</p>
