@@ -322,6 +322,210 @@ export const landingPages: Record<string, LandingPageData> = {
       "当稳定连接、免费试用和多设备支持都具备时，无日志就会成为区分“能不能用”和“适不适合长期使用”的关键一步。",
     relatedPaths: ["/", "/vpn-guide", "/best-vpn-for-china", "/vpn-free-trial"],
   },
+  iphone: {
+    path: "/iphone-vpn",
+    label: "iPhone VPN · 更适合苹果手机用户",
+    title: "iPhone VPN 推荐",
+    description:
+      "如果你主要在 iPhone 上使用 VPN，那比起看很多复杂参数，更值得先确认的是安装方不方便、切换顺不顺手、连接稳不稳。",
+    metaTitle: "iPhone VPN 推荐｜适合苹果手机用户，先试再决定",
+    metaDescription:
+      "想找适合 iPhone 的 VPN？这页重点介绍苹果手机上的连接稳定性、使用体验、3 天免费试用、多设备支持和隐私保护。",
+    keywordText: "先看 iPhone 上安装顺不顺、连接稳不稳，再决定要不要继续用。",
+    searchIntent: "适合主要用 iPhone，希望先看手机端体验再决定要不要试用的人。",
+    openingAnswer: [
+      "很多人找 iPhone VPN，真正想知道的不是专业术语，而是装上之后是不是顺手：好不好连、切换快不快、日常会不会麻烦。",
+      "如果你本来就主要在 iPhone 上用，那最值得先确认的就是手机端体验，而不是先看一堆和自己无关的桌面端参数。",
+    ],
+    evaluationPoints: [
+      {
+        title: "先看安装和连接是不是省事",
+        body: "对 iPhone 用户来说，第一次装上后能不能快速连上、切换是否顺手，往往比理论参数更重要。",
+      },
+      {
+        title: "再看中国网络环境下稳不稳",
+        body: "如果你是在中国网络环境下使用，稳定性依然是第一位。手机端再方便，如果经常掉线，体验还是会打折。",
+      },
+      {
+        title: "多设备支持会更实用",
+        body: "很多人不会只在手机上用，一个账号支持 4 台设备，意味着 iPhone 和电脑可以一起覆盖。",
+      },
+      {
+        title: "隐私也别放到最后才看",
+        body: "如果你会长期使用 iPhone VPN，那无日志这类隐私信号也值得早点确认。",
+      },
+    ],
+    usefulFor: [
+      "主要在 iPhone 上使用 VPN 的人",
+      "想先看苹果手机端体验顺不顺的人",
+      "希望手机和电脑后续一起用的人",
+      "不想一开始就做长期决定的人",
+    ],
+    avoidIf: [
+      "主要使用 Windows 或 Mac，手机只是偶尔才用的人",
+      "只想看节点数量和复杂参数的人",
+      "只想找完全免费的临时工具的人",
+    ],
+    recommendationReason:
+      "如果你主要用 iPhone，那就先看手机端体验好不好。装得顺、连得稳、切换方便，通常比纸面参数更重要。",
+    finalTitle: "如果你主要用 iPhone，先把手机端体验试出来",
+    finalBody:
+      "最直接的做法还是先试 3 天。你只要在自己常用的网络环境里试试连接速度、切换流畅度和日常使用感受，很快就能知道它适不适合你。",
+    relatedPaths: ["/", "/vpn-guide", "/best-vpn-for-china", "/vpn-free-trial"],
+  },
+  android: {
+    path: "/android-vpn",
+    label: "Android VPN · 更适合安卓手机用户",
+    title: "Android VPN 推荐",
+    description:
+      "如果你主要在安卓手机上使用 VPN，那除了能不能连上，更值得先确认的是兼容性、切换顺不顺，以及在中国网络环境下稳不稳。",
+    metaTitle: "Android VPN 推荐｜适合安卓手机用户，连接稳定更重要",
+    metaDescription:
+      "想找适合 Android 的 VPN？这页重点介绍安卓手机上的连接稳定性、兼容性、3 天免费试用、多设备支持和隐私保护。",
+    keywordText: "先看安卓手机上连得稳不稳、切换顺不顺，再决定要不要继续用。",
+    searchIntent: "适合主要用安卓手机，希望先看稳定性和兼容性的人。",
+    openingAnswer: [
+      "很多人找 Android VPN，最担心的不是能不能装，而是装上之后是否稳定、通知栏切换顺不顺、不同网络环境下会不会掉。",
+      "如果你本来就主要在安卓手机上使用，那先把手机端体验确认清楚，会比先看很多桌面端内容更有意义。",
+    ],
+    evaluationPoints: [
+      {
+        title: "先看兼容性和切换体验",
+        body: "安卓机型和系统版本比较多，所以装上之后是否顺手、切换是否方便，是很值得先确认的一点。",
+      },
+      {
+        title: "稳定性还是第一位",
+        body: "尤其是在中国网络环境下，安卓端能不能长期稳定连接，决定了你后面愿不愿意继续用。",
+      },
+      {
+        title: "试用期最适合验证真实体验",
+        body: "先用自己的手机、自己的网络和自己的使用时间段去试，会比看别人总结更准确。",
+      },
+      {
+        title: "多设备支持会让后续更方便",
+        body: "如果你后面还想在电脑上一起用，一个账号支持 4 台设备会省很多事。",
+      },
+    ],
+    usefulFor: [
+      "主要在安卓手机上使用 VPN 的人",
+      "希望先看兼容性和手机端顺手程度的人",
+      "想先试几天再决定的人",
+      "后续还想和电脑一起用的人",
+    ],
+    avoidIf: [
+      "主要只在桌面端使用的人",
+      "只想看复杂评测和机型横评的人",
+      "只打算临时用一次的人",
+    ],
+    recommendationReason:
+      "如果你是安卓用户，先看稳定性和兼容性通常最划算，因为这两点最直接影响日常体验。",
+    finalTitle: "如果你主要用安卓，先把兼容性和稳定性试出来",
+    finalBody:
+      "对安卓用户来说，最靠谱的判断方式还是先试 3 天。装到自己的手机上，在常用网络环境里试试，结论通常很快就出来了。",
+    relatedPaths: ["/", "/vpn-guide", "/best-vpn-for-china", "/vpn-free-trial"],
+  },
+  windows: {
+    path: "/windows-vpn",
+    label: "Windows VPN · 更适合电脑端使用",
+    title: "Windows VPN 推荐",
+    description:
+      "如果你主要在 Windows 电脑上使用 VPN，那比起看很多花哨功能，更值得先确认的是连接稳不稳、切换快不快，以及日常用起来麻不麻烦。",
+    metaTitle: "Windows VPN 推荐｜适合电脑端使用，先试再决定",
+    metaDescription:
+      "想找适合 Windows 的 VPN？这页重点介绍电脑端连接稳定性、切换效率、3 天免费试用、多设备支持和隐私保护。",
+    keywordText: "先看 Windows 电脑上连接稳不稳、切换快不快，再决定值不值得继续用。",
+    searchIntent: "适合主要在 Windows 电脑上使用，希望先看桌面端稳定性和效率的人。",
+    openingAnswer: [
+      "很多人找 Windows VPN，真正关心的是电脑端能不能稳、切换够不够快、日常使用时会不会频繁出问题。",
+      "如果你本来就主要在电脑上使用，那先看桌面端体验会更有参考价值，比看太多泛泛的介绍更直接。",
+    ],
+    evaluationPoints: [
+      {
+        title: "先看电脑端连接稳定性",
+        body: "Windows 端最重要的还是连接本身：能不能稳、会不会频繁断开、切换时是否顺畅。",
+      },
+      {
+        title: "再看切换和日常使用效率",
+        body: "如果每次切换都很慢、很卡，日常使用体验就会很差，所以桌面端的流畅度很重要。",
+      },
+      {
+        title: "免费试用能少走弯路",
+        body: "直接在自己的 Windows 电脑上试几天，通常比看很多测评更能说明问题。",
+      },
+      {
+        title: "手机电脑一起用会更完整",
+        body: "如果你不只在电脑上用，一个账号支持 4 台设备，后面扩到手机上也会更方便。",
+      },
+    ],
+    usefulFor: [
+      "主要在 Windows 电脑上使用 VPN 的人",
+      "希望先看连接稳定和切换效率的人",
+      "办公、学习或日常浏览更依赖电脑的人",
+      "想先试几天再决定的人",
+    ],
+    avoidIf: [
+      "主要只在手机端使用的人",
+      "只想看特别技术化参数的人",
+      "只是偶尔临时使用一次的人",
+    ],
+    recommendationReason:
+      "如果你主要在 Windows 电脑上用，那最值得优先看的就是稳定性和切换效率，因为这两点最直接影响日常使用感受。",
+    finalTitle: "如果你主要用 Windows，先把电脑端体验试清楚",
+    finalBody:
+      "最直接的办法还是先试 3 天。你只要在自己的 Windows 电脑上多用几个场景，很快就能判断它到底适不适合长期使用。",
+    relatedPaths: ["/", "/vpn-guide", "/best-vpn-for-china", "/vpn-free-trial"],
+  },
+  mac: {
+    path: "/mac-vpn",
+    label: "Mac VPN · 更适合苹果电脑用户",
+    title: "Mac VPN 推荐",
+    description:
+      "如果你主要在 Mac 上使用 VPN，那除了连接稳不稳，也值得先确认安装体验、切换流畅度，以及和 iPhone 等设备一起使用时顺不顺。",
+    metaTitle: "Mac VPN 推荐｜适合苹果电脑用户，体验顺手更重要",
+    metaDescription:
+      "想找适合 Mac 的 VPN？这页重点介绍苹果电脑上的连接稳定性、安装体验、3 天免费试用、多设备支持和隐私保护。",
+    keywordText: "先看 Mac 上安装顺不顺、切换流不流畅，再决定要不要继续用。",
+    searchIntent: "适合主要在 Mac 上使用，希望先看苹果电脑端体验的人。",
+    openingAnswer: [
+      "很多人找 Mac VPN，真正想知道的是：装上后顺不顺、连起来稳不稳、和 iPhone 等设备一起用时会不会省事。",
+      "如果你本来就在苹果生态里，那比起看很多抽象参数，更值得先确认的是实际体验够不够顺手。",
+    ],
+    evaluationPoints: [
+      {
+        title: "先看安装和切换是否顺手",
+        body: "对 Mac 用户来说，安装体验和切换流畅度很影响第一印象，也是日常最常感受到的部分。",
+      },
+      {
+        title: "稳定性依然不能放松",
+        body: "即使是 Mac 端，真正决定你会不会留下来的，还是中国网络环境下能不能稳定使用。",
+      },
+      {
+        title: "多设备支持会更有价值",
+        body: "如果你还会在 iPhone 或 iPad 等设备上一起用，一个账号支持 4 台设备会更省心。",
+      },
+      {
+        title: "隐私适合一起确认",
+        body: "如果你会长期使用 Mac VPN，那无日志这类隐私信号也值得一起看清楚。",
+      },
+    ],
+    usefulFor: [
+      "主要在 Mac 上使用 VPN 的人",
+      "身处苹果生态，希望多设备配合更顺的人",
+      "想先看安装体验和流畅度的人",
+      "希望先试几天再决定的人",
+    ],
+    avoidIf: [
+      "主要使用 Windows 或安卓设备的人",
+      "只想看特别底层参数的人",
+      "只打算非常短期使用的人",
+    ],
+    recommendationReason:
+      "如果你主要用 Mac，那先把安装体验、切换流畅度和稳定性看清楚，通常就够你判断它适不适合长期留下来。",
+    finalTitle: "如果你主要用 Mac，先把顺手程度试出来",
+    finalBody:
+      "对 Mac 用户来说，最靠谱的方式还是先试 3 天。只要在自己的电脑和常用网络环境里实际用一轮，通常很快就知道值不值得继续。",
+    relatedPaths: ["/", "/vpn-guide", "/best-vpn-for-china", "/vpn-free-trial"],
+  },
 };
 
 export const topicHubSections = [
@@ -346,5 +550,6 @@ export function getRelatedPages(paths: string[]) {
 export function buildAbsoluteUrl(path: string) {
   return path === "/" ? siteUrl : `${siteUrl}${path}`;
 }
+
 
 

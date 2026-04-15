@@ -7,6 +7,10 @@ const pageEntries = [
   { path: "/best-vpn-for-china", priority: 0.9 },
   { path: "/vpn-free-trial", priority: 0.86 },
   { path: "/no-log-vpn", priority: 0.86 },
+  { path: "/iphone-vpn", priority: 0.82 },
+  { path: "/android-vpn", priority: 0.82 },
+  { path: "/windows-vpn", priority: 0.82 },
+  { path: "/mac-vpn", priority: 0.82 },
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
