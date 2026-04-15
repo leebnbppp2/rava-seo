@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { buildAbsoluteUrl, siteName, siteUrl } from "@/lib/site";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -12,12 +13,12 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const siteTitle = "中国可用的稳定 VPN 推荐 | Rava VPN";
+const siteTitle = "中国可用的稳定 VPN 推荐｜中文用户优先";
 const siteDescription =
-  "面向中文用户的简洁 VPN 引导页面：自研协议、针对中国网络环境更强穿透力、3 天免费试用、支持 4 台设备、不留日志。";
-const siteUrl = "https://rava-seo.vercel.app";
+  "面向中文用户的 VPN 推荐微站，围绕中国网络环境下的稳定连接、3 天免费试用、4 台设备支持和无日志隐私保护做专题化整理。";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: siteTitle,
   description: siteDescription,
   keywords: [
@@ -27,15 +28,16 @@ export const metadata: Metadata = {
     "无日志vpn",
     "多设备vpn",
     "适合中国使用的vpn",
+    "中文vpn推荐",
   ],
   alternates: {
-    canonical: siteUrl,
+    canonical: buildAbsoluteUrl("/"),
   },
   openGraph: {
     title: siteTitle,
     description: siteDescription,
-    url: siteUrl,
-    siteName: "Rava VPN",
+    url: buildAbsoluteUrl("/"),
+    siteName,
     locale: "zh_CN",
     type: "website",
   },

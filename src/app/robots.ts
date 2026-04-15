@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { buildAbsoluteUrl } from "@/lib/site";
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -6,6 +7,7 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://rava-seo.vercel.app/sitemap.xml",
+    sitemap: buildAbsoluteUrl("/sitemap.xml"),
+    host: buildAbsoluteUrl("/"),
   };
 }
