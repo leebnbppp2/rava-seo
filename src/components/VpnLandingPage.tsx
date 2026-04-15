@@ -96,7 +96,7 @@ export default function VpnLandingPage({ page }: VpnLandingPageProps) {
             <div className="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
               <div>
                 <p className="text-lg font-black tracking-tight">{siteName}</p>
-                <p className="mt-1 text-sm text-[var(--muted)]">先把最要紧的看明白，再决定要不要先免费用个三天。</p>
+                <p className="mt-1 text-sm text-[var(--muted)]">先看稳不稳，再决定要不要先免费用个三天。</p>
               </div>
               <nav className="flex flex-wrap gap-2 text-sm font-semibold text-[var(--foreground)]/82">
                 {pageLinks.map((item) => (
@@ -135,7 +135,7 @@ export default function VpnLandingPage({ page }: VpnLandingPageProps) {
               <p className="section-label mb-4 text-[var(--accent)]">先看一眼</p>
               <div className="space-y-4">
                 <div className="rounded-3xl border border-black/8 bg-white/70 p-5">
-                  <p className="text-lg font-extrabold">什么人最适合先看这页</p>
+                  <p className="text-lg font-extrabold">你要是这种情况，就先看这里</p>
                   <p className="mt-2 text-sm leading-7 text-[var(--muted)]">{page.searchIntent}</p>
                 </div>
                 {quickSignals.map((card) => (
@@ -153,22 +153,22 @@ export default function VpnLandingPage({ page }: VpnLandingPageProps) {
       <section id="analysis" className="px-4 pb-12 md:pb-18">
         <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[0.92fr_1.08fr]">
           <div className="surface-dark rounded-[2rem] p-8 md:p-10">
-            <p className="section-label mb-4 text-[#ffe557]">先说人话</p>
-            <h2 className="text-3xl font-black md:text-4xl">别先研究一堆参数，先看这几个最容易踩坑的地方</h2>
+            <p className="section-label mb-4 text-[#ffe557]">先说点实在的</p>
+            <h2 className="text-3xl font-black md:text-4xl">别先看参数，先看用起来会不会闹心</h2>
             <div className="mt-4 space-y-4 text-base leading-8 text-white/78">
               {page.openingAnswer.map((paragraph) => (
                 <p key={paragraph}>{paragraph}</p>
               ))}
             </div>
             <div className="mt-8 rounded-[1.5rem] border border-white/10 bg-white/8 p-5">
-              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-white/62">一句最要紧的话</p>
+              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-white/62">就记这一句</p>
               <p className="mt-3 text-base leading-8 text-white/82">{page.keywordText}</p>
             </div>
           </div>
 
           <div className="surface-card rounded-[2rem] p-8 md:p-10">
             <p className="section-label mb-4 text-[var(--accent)]">具体看什么</p>
-            <h2 className="text-3xl font-black md:text-4xl">别光看广告词，先看这些地方顺不顺</h2>
+            <h2 className="text-3xl font-black md:text-4xl">别听它怎么说，先看你自己用着顺不顺</h2>
             <div className="mt-6 grid gap-4 sm:grid-cols-2">
               {page.evaluationPoints.map((item) => (
                 <div key={item.title} className="rounded-3xl border border-black/8 bg-white/70 p-5">
@@ -185,7 +185,7 @@ export default function VpnLandingPage({ page }: VpnLandingPageProps) {
         <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[1.02fr_0.98fr]">
           <div className="surface-card rounded-[2rem] p-8 md:p-10">
             <p className="section-label mb-4 text-[var(--accent)]">更适合谁</p>
-            <h2 className="text-3xl font-black md:text-4xl">如果你是下面这几种情况，这页会比较省时间</h2>
+            <h2 className="text-3xl font-black md:text-4xl">如果你正好是这几种情况，往下看就对了</h2>
             <div className="mt-6 grid gap-3">
               {page.usefulFor.map((item) => (
                 <div key={item} className="rounded-3xl border border-black/8 bg-white/70 px-5 py-4 text-sm leading-7 text-[var(--muted)] md:text-base">
@@ -197,7 +197,7 @@ export default function VpnLandingPage({ page }: VpnLandingPageProps) {
 
           <div className="surface-card rounded-[2rem] p-8 md:p-10">
             <p className="section-label mb-4 text-[var(--accent-dark)]">不一定适合</p>
-            <h2 className="text-3xl font-black md:text-4xl">如果你想要的是这些，那可以先换个看法</h2>
+            <h2 className="text-3xl font-black md:text-4xl">如果你想找的是这些，那这页可能不是给你的</h2>
             <div className="mt-6 grid gap-3">
               {page.avoidIf.map((item) => (
                 <div key={item} className="rounded-3xl border border-black/8 bg-white/70 px-5 py-4 text-sm leading-7 text-[var(--muted)] md:text-base">
@@ -217,10 +217,10 @@ export default function VpnLandingPage({ page }: VpnLandingPageProps) {
         <div className="mx-auto max-w-6xl rounded-[2rem] bg-[var(--accent-dark)] px-6 py-10 text-white md:px-10 md:py-12">
           <div className="grid gap-8 lg:grid-cols-[1.08fr_0.92fr] lg:items-start">
             <div>
-              <p className="section-label mb-4 text-[#ffe557]">接着往下看</p>
-              <h2 className="text-3xl font-black md:text-4xl">你更在意哪件事，就顺着那条线继续看</h2>
+              <p className="section-label mb-4 text-[#ffe557]">接着看</p>
+              <h2 className="text-3xl font-black md:text-4xl">你最在意什么，就点进去看那个</h2>
               <p className="mt-4 max-w-2xl text-base leading-8 text-white/78">
-                你不用把所有页面都看完。要是你最在意中国能不能稳用，就去看稳定性；要是你最怕花冤枉钱，就先看试用；要是你本来就更在意隐私，那就直接看无日志。
+                不用把所有页面都刷一遍。你要是最怕在中国用着不稳，就去看稳定性；你要是想先试清楚再决定，就看试用；你要是本来就更在意隐私，就直接看无日志。
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 {supportedDevices.map((item) => (
@@ -247,9 +247,9 @@ export default function VpnLandingPage({ page }: VpnLandingPageProps) {
         <div className="mx-auto max-w-6xl">
           <div className="mb-8 max-w-3xl">
             <p className="section-label mb-4 text-[var(--accent-dark)]">常见问题</p>
-            <h2 className="text-3xl font-black md:text-4xl">大家最常卡住的，基本就是这几件事</h2>
+            <h2 className="text-3xl font-black md:text-4xl">大家最常纠结的，基本就是这几件事</h2>
             <p className="mt-4 text-base leading-8 text-[var(--muted)]">
-              先把这些问题看完，心里通常就会有数很多。别急着一次做决定，先把最担心的地方看明白就行。
+              先把这里看完，心里基本就能有个底。没必要一下子全想明白，先把最担心的那一项看清楚就够了。
             </p>
           </div>
 
