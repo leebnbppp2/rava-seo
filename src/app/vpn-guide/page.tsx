@@ -56,7 +56,13 @@ export default function VpnGuidePage() {
               这一页把中文用户最常见的几个判断方向整理在一起：适合中国使用、免费试用、无日志、设备兼容和多设备场景。你可以先看自己最在意哪一项，再进入对应页面，会比盲目到处找资料更省时间。
             </p>
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-              <a href={primaryReferralPath} className="btn-primary text-base md:text-lg">
+              <a
+                href={primaryReferralPath}
+                className="btn-primary text-base md:text-lg"
+                data-track-outbound="rava-go"
+                data-cta-label="guide-hero-trial"
+                data-cta-location="/vpn-guide"
+              >
                 直接开始试用
               </a>
               <Link href="/" className="btn-secondary text-base md:text-lg">
@@ -124,7 +130,13 @@ export default function VpnGuidePage() {
             </div>
           </div>
           <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-            <a href={primaryReferralPath} className="btn-primary text-base md:text-lg">
+            <a
+              href={primaryReferralPath}
+              className="btn-primary text-base md:text-lg"
+              data-track-outbound="rava-go"
+              data-cta-label="guide-footer-trial"
+              data-cta-location="/vpn-guide"
+            >
               立即前往试用
             </a>
             <Link href="/best-vpn-for-china" className="btn-secondary text-base md:text-lg">

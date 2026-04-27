@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import SeoAnalytics from "@/components/SeoAnalytics";
 import "./globals.css";
 import { buildAbsoluteUrl, siteName, siteUrl } from "@/lib/site";
 
@@ -16,6 +17,8 @@ const geistMono = Geist_Mono({
 const siteTitle = "中国可用的稳定 VPN 推荐｜中文用户优先";
 const siteDescription =
   "面向中文用户的 VPN 推荐微站，围绕中国网络环境下的稳定连接、3 天免费试用、4 台设备支持和无日志隐私保护做专题化整理。";
+const googleSiteVerification = process.env.GOOGLE_SITE_VERIFICATION;
+const bingSiteVerification = process.env.BING_SITE_VERIFICATION;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -46,6 +49,14 @@ export const metadata: Metadata = {
     title: siteTitle,
     description: siteDescription,
   },
+  verification: {
+    google: googleSiteVerification,
+    other: bingSiteVerification
+      ? {
+          "msvalidate.01": bingSiteVerification,
+        }
+      : undefined,
+  },
 };
 
 export default function RootLayout({
@@ -60,6 +71,7 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col bg-[var(--background)] text-[var(--foreground)]">
         {children}
+        <SeoAnalytics />
       </body>
     </html>
   );

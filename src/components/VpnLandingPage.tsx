@@ -106,7 +106,13 @@ export default function VpnLandingPage({ page }: VpnLandingPageProps) {
               <p className="mt-5 max-w-2xl text-lg leading-8 text-[var(--muted)] md:text-xl">{page.description}</p>
 
               <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-                <a href={primaryReferralPath} className="btn-primary text-base md:text-lg">
+                <a
+                  href={primaryReferralPath}
+                  className="btn-primary text-base md:text-lg"
+                  data-track-outbound="rava-go"
+                  data-cta-label="hero-trial"
+                  data-cta-location={page.path}
+                >
                   先免费用个三天
                 </a>
                 <Link href="#analysis" className="btn-secondary text-base md:text-lg">
@@ -196,7 +202,13 @@ export default function VpnLandingPage({ page }: VpnLandingPageProps) {
                 <p className="mt-4 text-base leading-8 text-[var(--muted)]">{page.finalBody}</p>
               </div>
               <div>
-                <a href={primaryReferralPath} className="btn-primary text-base md:text-lg">
+                <a
+                  href={primaryReferralPath}
+                  className="btn-primary text-base md:text-lg"
+                  data-track-outbound="rava-go"
+                  data-cta-label="footer-trial"
+                  data-cta-location={page.path}
+                >
                   先免费用个三天
                 </a>
               </div>
