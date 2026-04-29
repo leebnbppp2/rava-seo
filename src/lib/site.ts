@@ -178,7 +178,7 @@ export const landingPages: Record<string, LandingPageData> = {
       "很多人搜中国好用 VPN，不是想听故事，就是想知道：在中国用的时候到底稳不稳，会不会老掉。",
     metaTitle: "中国好用 VPN 推荐｜适合中国网络环境，支持免费试用",
     metaDescription:
-      "想找中国好用的 VPN？这页重点介绍中国网络环境下的稳定连接、3 天免费试用、4 台设备支持和无日志隐私保护。",
+      "想找在中国更稳一点的 VPN？这页不跟你绕，直接看最关键的几件事：连得稳不稳、能不能先免费用 3 天、手机电脑能不能一起用，以及长期用起来安不安心。",
     keywordText: "先别管它写得多厉害，先看在中国用的时候稳不稳。",
     searchIntent: "适合已经没耐心看那些虚的，只想知道在中国到底稳不稳的人。",
     openingAnswer: [
