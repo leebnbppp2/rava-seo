@@ -4,6 +4,7 @@ import {
   buildAbsoluteUrl,
   LandingPageData,
   lastUpdated,
+  pageLinks,
   primaryReferralPath,
   quickSignals,
   sharedFaqs,
@@ -43,6 +44,9 @@ export default function VpnLandingPage({ page }: VpnLandingPageProps) {
   const openingParagraphs = page.openingAnswer.slice(0, 1);
   const evaluationCards = page.evaluationPoints.slice(0, 2);
   const faqItems = sharedFaqs.slice(0, 2);
+  const relatedLinks = page.relatedPaths
+    .map((path) => pageLinks.find((item) => item.href === path))
+    .filter((item): item is (typeof pageLinks)[number] => Boolean(item));
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -177,6 +181,26 @@ export default function VpnLandingPage({ page }: VpnLandingPageProps) {
           </div>
         </div>
       </section>
+
+      {relatedLinks.length > 0 ? (
+        <section className="px-4 pb-12 md:pb-16">
+          <div className="mx-auto max-w-6xl">
+            <div className="mb-6 max-w-3xl">
+              <p className="section-label mb-4 text-[var(--accent-dark)]">继续往下看</p>
+              <h2 className="text-3xl font-black md:text-4xl">如果你更在意别的点，可以直接看这几页</h2>
+            </div>
+            <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+              {relatedLinks.map((item) => (
+                <Link key={item.href} href={item.href} className="surface-card rounded-[1.75rem] p-5 transition hover:-translate-y-0.5">
+                  <p className="section-label text-[var(--accent)]">{item.shortTitle}</p>
+                  <p className="mt-2 text-xl font-black">{item.title}</p>
+                  <p className="mt-3 text-sm leading-7 text-[var(--muted)]">{item.summary}</p>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      ) : null}
 
       <section id="faq" className="px-4 pb-16 md:pb-24">
         <div className="mx-auto max-w-6xl">
