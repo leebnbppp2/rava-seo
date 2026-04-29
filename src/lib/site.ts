@@ -1,4 +1,4 @@
-export const siteUrl = "https://rava-seo-work.vercel.app";
+export const siteUrl = "https://tryrava.com";
 export const siteName = "Rava VPN";
 export const primaryReferralPath = "/go";
 export const lastUpdated = "2026-04-14";
