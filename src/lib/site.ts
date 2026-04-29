@@ -33,6 +33,7 @@ export type LandingPageData = {
   finalTitle: string;
   finalBody: string;
   relatedPaths: string[];
+  faqs?: { q: string; a: string }[];
 };
 
 export const supportedDevices = ["Android", "iPhone", "Windows", "Mac"];
@@ -219,6 +220,20 @@ export const landingPages: Record<string, LandingPageData> = {
     finalBody:
       "真想知道中国好不好用，还是得先免费用个三天。把你平时最常用的网络和设备都试一遍，基本不用看别人替你下结论。",
     relatedPaths: ["/", "/vpn-guide", "/vpn-free-trial", "/no-log-vpn"],
+    faqs: [
+      {
+        q: "在中国用 VPN，最先该看什么？",
+        a: "先别急着看参数，先看晚上高峰稳不稳、换 Wi‑Fi 或流量会不会掉、你常用的网站和 App 能不能顺开。对大多数人来说，这三件事比测速图更有参考价值。",
+      },
+      {
+        q: "中国网络环境里，免费试用到底值不值得试？",
+        a: "值得。因为别人说稳，不一定对你的网络也稳。先拿自己的手机、电脑、Wi‑Fi 和流量跑几天，比看十篇总结更准。",
+      },
+      {
+        q: "如果只是偶尔出问题，还算不算能用？",
+        a: "要看你能不能接受。偶尔慢一下不一定致命，但如果经常掉线、切网络就要重连，长期用起来通常会很烦。",
+      },
+    ],
   },
   trial: {
     path: "/vpn-free-trial",
@@ -270,6 +285,20 @@ export const landingPages: Record<string, LandingPageData> = {
     finalBody:
       "先把手机、电脑、Wi‑Fi 和流量都试一遍，三天下来，基本就知道这钱该不该花。",
     relatedPaths: ["/", "/vpn-guide", "/best-vpn-for-china", "/no-log-vpn"],
+    faqs: [
+      {
+        q: "免费试用时，最容易试错的地方是什么？",
+        a: "最常见的问题就是只点开一次就下结论。真要试，最好把家里 Wi‑Fi、手机流量、手机和电脑都跑一遍，再挑你最常用的时间段看稳不稳。",
+      },
+      {
+        q: "3 天试用够不够判断要不要买？",
+        a: "对大多数人来说够了。你只要按自己平时最常用的场景去试，三天下来通常就能判断它适不适合长期留下来。",
+      },
+      {
+        q: "试用时除了连不连得上，还该看什么？",
+        a: "还要看换网络会不会掉、常用网站和 App 打开顺不顺、手机电脑一起用会不会麻烦。能不能长期省心，往往就在这些细节里。",
+      },
+    ],
   },
   nolog: {
     path: "/no-log-vpn",
@@ -321,6 +350,20 @@ export const landingPages: Record<string, LandingPageData> = {
     finalBody:
       "要是你本来就比较在意少留记录，那就把无日志和稳定性一起确认掉，再决定要不要继续用。",
     relatedPaths: ["/", "/vpn-guide", "/best-vpn-for-china", "/vpn-free-trial"],
+    faqs: [
+      {
+        q: "无日志到底值不值得单独拿出来看？",
+        a: "值得。如果你本来就比较在意少留痕迹，越早确认这件事越安心。它不一定是你第一眼就会看的点，但通常是长期使用时很难忽略的一项。",
+      },
+      {
+        q: "无日志是不是就等于绝对安全？",
+        a: "不是。无日志更像是少一层顾虑，不是开了以后就什么都不用管了。真正更实用的做法，是把隐私和稳定性一起确认。",
+      },
+      {
+        q: "如果主要想长期用，除了无日志还该一起看什么？",
+        a: "还要看中国网络环境下稳不稳、多个设备一起用麻不麻烦、试用时能不能把常用场景跑清楚。长期省心，通常不是只看一个标签。",
+      },
+    ],
   },
   iphone: {
     path: "/iphone-vpn",
@@ -530,16 +573,16 @@ export const landingPages: Record<string, LandingPageData> = {
 
 export const topicHubSections = [
   {
-    title: "先按自己最在意的点来选入口",
-    body: "如果你最担心的是中国能不能用，就先看稳定性；如果你最担心试错成本，就先看免费试用；如果你更在意长期使用是否安心，就先看无日志。把问题分开看，会更容易判断。",
+    title: "先按你最在意的点来选",
+    body: "最担心中国能不能稳用，就先看中国使用那页；最怕花了钱才后悔，就先看免费试用；更在意长期安心，就先看无日志。先把问题拆开，判断会更快。",
   },
   {
-    title: "别一上来就看一堆参数",
-    body: "很多人真正想知道的并不是专业术语，而是自己平时会不会用得顺：连得上吗、切换方便吗、值不值得继续。先把这些问题看清楚更重要。",
+    title: "先看自己会不会用得顺",
+    body: "很多人真正想知道的不是专业术语，而是自己平时会不会用得省心：连得上吗、切换方便吗、值不值得继续。先把这些事看清楚更重要。",
   },
   {
-    title: "设备兼容和试用体验是很多人忽略的筛选条件",
-    body: "比起一味比较参数，更值得先确认的是：你常用的 iPhone、Android、Windows、Mac 能不能顺利用起来，以及 3 天试用能否给出清晰答案。",
+    title: "设备和试用期最容易帮你排除不合适的",
+    body: "如果你平时用 iPhone、Android、Windows 或 Mac，就直接看对应页面；如果你还没想好要不要买，先拿 3 天试用把常用场景跑一遍，通常很快就有答案。",
   },
 ];
 

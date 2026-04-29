@@ -5,13 +5,13 @@ import { buildAbsoluteUrl, lastUpdated, pageLinks, primaryReferralPath, quickSig
 export const metadata: Metadata = {
   title: "中文 VPN 选购专题｜中国使用、免费试用、无日志与多设备",
   description:
-    "整理中文用户最常见的 VPN 搜索主题：适合中国使用、免费试用、无日志、多设备和设备兼容，作为百度和 Google 双兼容的专题聚合页。",
+    "把中文用户最常看的几个 VPN 方向收在一起：适合中国使用、免费试用、无日志和多设备，方便你按自己的需求直接找入口。",
   keywords: ["vpn 专题", "中文 vpn 选购", "中国好用 vpn", "免费试用 vpn", "无日志 vpn"],
   alternates: { canonical: buildAbsoluteUrl("/vpn-guide") },
   openGraph: {
     title: "中文 VPN 选购专题｜中国使用、免费试用、无日志与多设备",
     description:
-      "整理中文用户最常见的 VPN 搜索主题：适合中国使用、免费试用、无日志、多设备和设备兼容，作为百度和 Google 双兼容的专题聚合页。",
+      "把中文用户最常看的几个 VPN 方向收在一起：适合中国使用、免费试用、无日志和多设备，方便你按自己的需求直接找入口。",
     url: buildAbsoluteUrl("/vpn-guide"),
     siteName,
     locale: "zh_CN",
@@ -20,6 +20,7 @@ export const metadata: Metadata = {
 };
 
 export default function VpnGuidePage() {
+  const guideLinks = pageLinks.filter((item) => item.href !== "/vpn-guide");
   const jsonLd = {
     '@context': 'https://schema.org',
     '@graph': [
@@ -34,7 +35,7 @@ export default function VpnGuidePage() {
       },
       {
         '@type': 'ItemList',
-        itemListElement: pageLinks.map((item, index) => ({
+        itemListElement: guideLinks.map((item, index) => ({
           '@type': 'ListItem',
           position: index + 1,
           url: buildAbsoluteUrl(item.href),
@@ -83,7 +84,7 @@ export default function VpnGuidePage() {
 
         <section className="mt-12 grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
           <div className="surface-dark rounded-[2rem] p-8 md:p-10">
-            <p className="section-label mb-4 text-[#ffe557]">为什么要做专题页</p>
+            <p className="section-label mb-4 text-[#ffe557]">怎么用这页更省时间</p>
             <div className="space-y-5 text-base leading-8 text-white/78">
               {topicHubSections.map((item) => (
                 <div key={item.title}>
@@ -95,7 +96,7 @@ export default function VpnGuidePage() {
           </div>
 
           <div className="grid gap-4">
-            {pageLinks.map((item) => (
+            {guideLinks.map((item) => (
               <Link key={item.href} href={item.href} className="surface-card rounded-[2rem] p-6 transition hover:-translate-y-0.5">
                 <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
                   <div>

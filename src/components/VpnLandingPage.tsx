@@ -42,7 +42,7 @@ export default function VpnLandingPage({ page }: VpnLandingPageProps) {
   const heroSignals = quickSignals.slice(0, 1);
   const openingParagraphs = page.openingAnswer.slice(0, 1);
   const evaluationCards = page.evaluationPoints.slice(0, 2);
-  const faqItems = sharedFaqs.slice(0, 2);
+  const faqItems = (page.faqs ?? sharedFaqs).slice(0, 2);
 
   const jsonLd = {
     "@context": "https://schema.org",
