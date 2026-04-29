@@ -116,7 +116,7 @@ export default function VpnLandingPage({ page }: VpnLandingPageProps) {
                   先免费用个三天
                 </a>
                 <Link href="#analysis" className="btn-secondary text-base md:text-lg">
-                  先看我该看什么
+                  我先看看值不值得试
                 </Link>
               </div>
 
@@ -129,10 +129,10 @@ export default function VpnLandingPage({ page }: VpnLandingPageProps) {
             </div>
 
             <div className="surface-card rounded-[2rem] p-6 md:p-8">
-              <p className="section-label mb-4 text-[var(--accent)]">先看一眼</p>
+              <p className="section-label mb-4 text-[var(--accent)]">你急着找的话，先看这块</p>
               <div className="space-y-3">
                 <div className="rounded-3xl border border-black/8 bg-white/70 p-5">
-                  <p className="text-lg font-extrabold">你要是这种情况，就先看这里</p>
+                  <p className="text-lg font-extrabold">你要是已经懒得看废话了，就直接看这里</p>
                   <p className="mt-2 text-sm leading-7 text-[var(--muted)]">{page.searchIntent}</p>
                 </div>
                 {heroSignals.map((card) => (
@@ -150,7 +150,7 @@ export default function VpnLandingPage({ page }: VpnLandingPageProps) {
       <section id="analysis" className="px-4 pb-12 md:pb-18">
         <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[0.92fr_1.08fr]">
           <div className="surface-dark rounded-[2rem] p-8 md:p-10">
-            <p className="section-label mb-4 text-[#ffe557]">先说点实在的</p>
+            <p className="section-label mb-4 text-[#ffe557]">我直接说人话</p>
             <h2 className="text-3xl font-black md:text-4xl">别先看参数，先看用起来会不会闹心</h2>
             <div className="mt-4 space-y-4 text-base leading-8 text-white/78">
               {openingParagraphs.map((paragraph) => (
@@ -158,14 +158,14 @@ export default function VpnLandingPage({ page }: VpnLandingPageProps) {
               ))}
             </div>
             <div className="mt-8 rounded-[1.5rem] border border-white/10 bg-white/8 p-5">
-              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-white/62">就记这一句</p>
+              <p className="text-sm font-semibold tracking-[0.08em] text-white/62">你就记住这句</p>
               <p className="mt-3 text-base leading-8 text-white/82">{page.keywordText}</p>
             </div>
           </div>
 
           <div className="surface-card rounded-[2rem] p-8 md:p-10">
-            <p className="section-label mb-4 text-[var(--accent)]">具体看什么</p>
-            <h2 className="text-3xl font-black md:text-4xl">别听它怎么说，先看你自己用着顺不顺</h2>
+            <p className="section-label mb-4 text-[var(--accent)]">到底看啥</p>
+            <h2 className="text-3xl font-black md:text-4xl">别听它吹，先看你自己用着烦不烦</h2>
             <div className="mt-5 grid gap-3 sm:grid-cols-2">
               {evaluationCards.map((item) => (
                 <div key={item.title} className="rounded-3xl border border-black/8 bg-white/70 p-5">
@@ -197,7 +197,7 @@ export default function VpnLandingPage({ page }: VpnLandingPageProps) {
           <div className="surface-card mt-10 rounded-[2rem] p-8 md:p-10">
             <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
               <div className="max-w-3xl">
-                <p className="section-label mb-3 text-[var(--accent)]">最后一句</p>
+                <p className="section-label mb-3 text-[var(--accent)]">最后我就一句</p>
                 <h2 className="text-3xl font-black md:text-4xl">{page.finalTitle}</h2>
                 <p className="mt-4 text-base leading-8 text-[var(--muted)]">{page.finalBody}</p>
               </div>
