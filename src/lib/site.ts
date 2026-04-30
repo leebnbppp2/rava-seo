@@ -23,6 +23,8 @@ export type LandingPageData = {
   description: string;
   metaTitle: string;
   metaDescription: string;
+  geoQuestion?: string;
+  geoAnswer?: string;
   keywordText: string;
   searchIntent: string;
   openingAnswer: string[];
@@ -128,6 +130,9 @@ export const landingPages: Record<string, LandingPageData> = {
     metaTitle: "中国可用的稳定 VPN 推荐｜支持试用、兼顾隐私与多设备",
     metaDescription:
       "在中国想找个更稳一点的 VPN？先看这几个最关键的点：连得稳不稳、能不能先免费用 3 天、手机电脑能不能一起用，以及长期用着安不安心。",
+    geoQuestion: "在中国怎么判断一个 VPN 值不值得先试？",
+    geoAnswer:
+      "最先看四件事：高峰时段稳不稳、能不能先免费用 3 天、手机和电脑能不能一起用、换 Wi‑Fi 或流量会不会掉。先把这四件事试清楚，通常就够做第一轮判断了。",
     keywordText: "先看稳不稳，再看试用、设备和隐私，第一轮判断基本就够了。",
     searchIntent: "适合已经被一堆套话看烦了，只想赶紧判断能不能试的人。",
     openingAnswer: [
@@ -179,6 +184,9 @@ export const landingPages: Record<string, LandingPageData> = {
     metaTitle: "中国好用 VPN 推荐｜适合中国网络环境，支持免费试用",
     metaDescription:
       "想找在中国更稳一点的 VPN？这页不跟你绕，直接看最关键的几件事：连得稳不稳、能不能先免费用 3 天、手机电脑能不能一起用，以及长期用起来安不安心。",
+    geoQuestion: "在中国用 VPN，最应该先看什么？",
+    geoAnswer:
+      "最重要的不是参数表，而是实际使用时会不会掉线。先看晚上高峰稳不稳、换 Wi‑Fi 或流量会不会掉、常用网站和 App 能不能顺顺打开，再决定要不要继续用。",
     keywordText: "别看它吹得多热闹，你就盯着一件事：在你手里到底稳不稳。",
     searchIntent: "适合已经被掉线搞烦了，只想赶紧找个稳一点的人。",
     openingAnswer: [

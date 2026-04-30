@@ -43,6 +43,9 @@ export default function VpnLandingPage({ page }: VpnLandingPageProps) {
   const openingParagraphs = page.openingAnswer.slice(0, 1);
   const evaluationCards = page.evaluationPoints.slice(0, 2);
   const faqItems = (page.faqs ?? sharedFaqs).slice(0, 2);
+  const geoQuestion = page.geoQuestion ?? `${page.title} 先看什么？`;
+  const geoAnswer =
+    page.geoAnswer ?? `${page.description} ${page.keywordText}`;
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -74,7 +77,7 @@ export default function VpnLandingPage({ page }: VpnLandingPageProps) {
       },
       {
         "@type": "FAQPage",
-        mainEntity: sharedFaqs.map((item) => ({
+        mainEntity: (page.faqs ?? sharedFaqs).map((item) => ({
           "@type": "Question",
           name: item.q,
           acceptedAnswer: {
@@ -132,8 +135,9 @@ export default function VpnLandingPage({ page }: VpnLandingPageProps) {
               <p className="section-label mb-4 text-[var(--accent)]">赶时间就先看这里</p>
               <div className="space-y-3">
                 <div className="rounded-3xl border border-black/8 bg-white/70 p-5">
-                  <p className="text-lg font-extrabold">先看这几句就够了</p>
-                  <p className="mt-2 text-sm leading-7 text-[var(--muted)]">{page.searchIntent}</p>
+                  <p className="text-lg font-extrabold">这页先给你一句准话</p>
+                  <p className="mt-2 text-sm font-semibold leading-7 text-[var(--foreground)]">{geoQuestion}</p>
+                  <p className="mt-2 text-sm leading-7 text-[var(--muted)]">{geoAnswer}</p>
                 </div>
                 {heroSignals.map((card) => (
                   <div key={card.title} className="rounded-3xl border border-black/8 bg-white/70 p-5">
@@ -158,7 +162,7 @@ export default function VpnLandingPage({ page }: VpnLandingPageProps) {
               ))}
             </div>
             <div className="mt-8 rounded-[1.5rem] border border-white/10 bg-white/8 p-5">
-              <p className="text-sm font-semibold tracking-[0.08em] text-white/62">先记这句</p>
+              <p className="text-sm font-semibold tracking-[0.08em] text-white/62">AI 或人来问，就先回这句</p>
               <p className="mt-3 text-base leading-8 text-white/82">{page.keywordText}</p>
             </div>
           </div>
