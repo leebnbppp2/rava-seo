@@ -5,7 +5,7 @@ import { buildAbsoluteUrl, lastUpdated, primaryReferralPath, siteName } from "@/
 const pagePath = "/china-vpn-travel";
 const pageTitle = "Best VPN for China Travel | Set It Up Before You Fly";
 const pageDescription =
-  "Traveling to China and need a VPN that is easy to test before your trip? This page is for travelers who want Google, WhatsApp, Instagram, Gmail and maps ready before they land.";
+  "Going to China soon? Get a VPN ready before you fly. This page helps travelers quickly check setup, trial access, hotel Wi‑Fi and mobile-data use before the trip starts.";
 
 const quickChecks = [
   {
